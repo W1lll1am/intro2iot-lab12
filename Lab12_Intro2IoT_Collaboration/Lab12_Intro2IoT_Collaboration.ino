@@ -1,5 +1,5 @@
 // === Automatic Room Light with Manual Override ===
-//test test
+
 const int lightSensorPin = A0;   // Photoresistor connected to A0
 const int buttonPin = 2;         // Button connected to D2
 const int ledPin = 9;            // LED (room light) connected to D9
@@ -38,8 +38,14 @@ bool isRoomDark() {
   Serial.print("Light Level: ");
   Serial.println(lightLevel);
 
-  // TODO: Fix this logic so it returns true when it's dark
-  return false; // <-- incorrect for now
+if (lightLevel < darkThreshold) {
+  Serial.println("Dark: YES");
+  return true;
+}
+else {
+  Serial.println("Dark: NO");
+  return false;
+}
 }
 
 // ===============================
