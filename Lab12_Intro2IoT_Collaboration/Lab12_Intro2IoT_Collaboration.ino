@@ -1,5 +1,5 @@
 // === Automatic Room Light with Manual Override ===
-
+//test test
 const int lightSensorPin = A0;   // Photoresistor connected to A0
 const int buttonPin = 2;         // Button connected to D2
 const int ledPin = 9;            // LED (room light) connected to D9
